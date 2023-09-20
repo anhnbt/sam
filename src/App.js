@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import html2canvas from "html2canvas";
 import { saveAs } from "file-saver";
 import ClipboardJS from "clipboard";
+import WhatshotTwoToneIcon from '@mui/icons-material/WhatshotTwoTone';
 import {
   Button,
   Table,
@@ -149,7 +150,7 @@ function App() {
             <TableRow>
               <TableCell>Tổng Điểm</TableCell>
               {totalScores.map((total, index) => (
-                <TableCell key={index}>{total}</TableCell>
+                <TableCell key={index}>{playerNames[index]}: {total}</TableCell>
               ))}
               <TableCell>{totalScoreSum}</TableCell>
             </TableRow>
